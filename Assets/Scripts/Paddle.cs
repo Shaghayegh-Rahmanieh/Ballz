@@ -29,15 +29,21 @@ public class Paddle : MonoBehaviour
       {
         this.direction = Vector2.left;
       }
-      else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+    }
+      
+       if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
       {
         this.direction = Vector2.right;
+      } 
+      else if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+      {
+        this.direction=Vector2.left;
       }
       else
       {
         this.direction = Vector2.zero;
       }
-    }
+    
   }
   private void FixedUpdate()
   {
